@@ -52,7 +52,7 @@ class _UsersListState extends State<UsersList> {
     return AppBar(
       title: const Text(
         'Users List',
-        style: TextStyle(color: Colors.black),
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
       ),
     );
   }
