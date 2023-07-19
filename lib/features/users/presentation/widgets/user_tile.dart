@@ -35,7 +35,7 @@ class UsersListWidget extends StatelessWidget {
 
   Widget _buildImage(BuildContext context) {
     return CachedNetworkImage(
-        imageUrl: user!.avatar!,
+        imageUrl: user!.avatar,
         imageBuilder: (context, imageProvider) => Padding(
               padding: const EdgeInsetsDirectional.only(end: 14),
               child: ClipRRect(
@@ -90,7 +90,7 @@ class UsersListWidget extends StatelessWidget {
           children: [
             // Title
             Text(
-              user!.firstName ?? '',
+              user!.firstName,
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
@@ -105,7 +105,7 @@ class UsersListWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                  user!.lastName ?? '',
+                  user!.lastName,
                   maxLines: 2,
                 ),
               ),
@@ -117,7 +117,7 @@ class UsersListWidget extends StatelessWidget {
                 const Icon(Icons.mail, size: 16),
                 const SizedBox(width: 4),
                 Text(
-                  user!.email!,
+                  user!.email,
                   style: const TextStyle(
                     fontSize: 12,
                   ),

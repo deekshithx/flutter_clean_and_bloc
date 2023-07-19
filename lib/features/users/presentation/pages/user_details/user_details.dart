@@ -48,7 +48,7 @@ class UserDetailsView extends HookWidget {
         children: [
           // Title
           Text(
-            '${user!.firstName!} ${user!.lastName}',
+            '${user!.firstName} ${user!.lastName}',
             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
           ),
 
@@ -59,7 +59,7 @@ class UserDetailsView extends HookWidget {
               const Icon(Ionicons.mail, size: 16),
               const SizedBox(width: 4),
               Text(
-                user!.email!,
+                user!.email,
                 style: const TextStyle(fontSize: 12),
               ),
             ],
@@ -74,7 +74,7 @@ class UserDetailsView extends HookWidget {
       width: double.maxFinite,
       height: 350,
       margin: const EdgeInsets.only(top: 14),
-      child: Image.network(user!.avatar!, fit: BoxFit.cover),
+      child: Image.network(user!.avatar, fit: BoxFit.cover),
     );
   }
 
